@@ -1,2 +1,2 @@
-export * from './actionsConstants';
+export * from './constants';
 export * from './userActions';

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import logo from '../img/logo.svg';
 
-class Main extends Component {
+class Admin extends Component {
   render() {
     return (
       <div className="App">
@@ -12,7 +12,7 @@ class Main extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/components/Main.js</code> and save to reload.
+          To get started, edit <code>src/components/Admin.js</code> and save to reload.
         </p>
       </div>
     );
@@ -23,7 +23,8 @@ class Main extends Component {
  * Injects from the store to component's props
  */
 function mapStateToProps(state) {
-  return {};
+  let { user } = state;
+  return { user };
 }
 
-export default connect(mapStateToProps)(Main);
+export default connect(mapStateToProps)(Admin);

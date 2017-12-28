@@ -10,7 +10,7 @@ export default function user(state = initialState, action) {
       }
     case userConstants.LOGOUT:
       return {
-        ...state
+        ...initialState
       }
     default:
       return {

@@ -4,6 +4,8 @@ body {
   font-family: sans-serif;
 }
 
+// create-react-app styles
+
 .App {
   text-align: center;
 }
@@ -32,4 +34,17 @@ body {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+// react-app-skeleton styles
+
+.main-container {
+  margin: 20px 0;
+}
+
+.login {
+  .grid {
+    margin: auto;
+    width: 450px;
+  }
 }

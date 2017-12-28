@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import logo from '../img/logo.svg';
 
-class Main extends Component {
+class NotFound extends Component {
   render() {
     return (
       <div className="App">
@@ -12,7 +12,7 @@ class Main extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/components/Main.js</code> and save to reload.
+          To get started, edit <code>src/components/RouteNotFound.js</code> and save to reload.
         </p>
       </div>
     );
@@ -26,4 +26,4 @@ function mapStateToProps(state) {
   return {};
 }
 
-export default connect(mapStateToProps)(Main);
+export default connect(mapStateToProps)(NotFound);
