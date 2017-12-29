@@ -3,7 +3,14 @@ import { connect } from 'react-redux';
 
 import logo from '../img/logo.svg';
 
+/**
+ * Main component
+ *
+ */
 class Main extends Component {
+  /**
+   * @override
+   */
   render() {
     return (
       <div className="App">

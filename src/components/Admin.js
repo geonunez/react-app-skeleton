@@ -3,7 +3,13 @@ import { connect } from 'react-redux';
 
 import logo from '../img/logo.svg';
 
+/**
+ * Admin Component
+ */
 class Admin extends Component {
+  /**
+   * @override
+   */
   render() {
     return (
       <div className="App">

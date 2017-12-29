@@ -6,8 +6,11 @@ import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
 import '../css/Login.css';
 import semacticLogo from '../img/semactic-logo.png';
 
-import { userActions } from '../actions';
+import { userAction } from '../actions';
 
+/**
+ * Login component
+ */
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +41,7 @@ class Login extends Component {
 
     const { username, password } = this.state;
 
-    this.props.dispatch(userActions.login(username, password));
+    this.props.dispatch(userAction.login(username, password));
   }
 
   /**

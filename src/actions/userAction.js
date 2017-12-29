@@ -1,8 +1,16 @@
 import { userConstants } from './';
-
 import { userService } from '../services';
 
-class UserActions {
+/**
+ * User Action class
+ */
+class UserAction {
+  /**
+   * Login action
+   *
+   * @param {string} username
+   * @param {string} password
+   */
   login(username, password) {
     return dispatch => {
       userService.login(username, password)
@@ -22,6 +30,9 @@ class UserActions {
     }
   }
 
+  /**
+   * Logout action
+   */
   logout() {
     userService.logout();
     return {
@@ -30,4 +41,4 @@ class UserActions {
   }
 }
 
-export const userActions = new UserActions();
+export const userAction = new UserAction();

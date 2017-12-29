@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { userActions } from '../actions/userActions';
+import { userAction } from '../actions';
 
+/**
+ * Logout component
+ */
 class Logout extends Component {
+  /**
+   * @override
+   */
   componentWillMount() {
-    this.props.dispatch(userActions.logout());
+    this.props.dispatch(userAction.logout());
   }
 
   /**

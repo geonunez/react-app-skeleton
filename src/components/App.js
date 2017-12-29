@@ -13,7 +13,15 @@ import Logout from './Logout';
 import Main from './Main';
 import NotFound from './NotFound';
 
+/**
+ * App components
+ *
+ * Route logic.
+ */
 class App extends Component {
+  /**
+   * @override
+   */
   render() {
     return (
       <Router history={ history }>

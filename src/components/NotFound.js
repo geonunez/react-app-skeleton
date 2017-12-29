@@ -3,7 +3,13 @@ import { connect } from 'react-redux';
 
 import logo from '../img/logo.svg';
 
+/**
+ * Not found component
+ */
 class NotFound extends Component {
+  /**
+   * @override
+   */
   render() {
     return (
       <div className="App">
