@@ -9,6 +9,7 @@ import { AuthRoute, history } from '../helpers';
 
 import Admin from './Admin';
 import Login from './Login';
+import Logout from './Logout';
 import Main from './Main';
 import NotFound from './NotFound';
 
@@ -19,6 +20,7 @@ class App extends Component {
         <Switch>
           <AuthRoute path='/admin' component={ Admin } />
           <Route path='/login' component={ Login } />
+          <Route path='/Logout' component={ Logout } />
           <Route exact path='/' component={ Main } />
           <Route component={ NotFound } />
         </Switch>

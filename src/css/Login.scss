@@ -1,0 +1,41 @@
+// ### Colors ###
+$background: #DADADA;
+$main_color: #00B5AD;
+$font_color: #FFF;
+
+body {
+  // ### react-app-skeleton styles ###
+  background-color: $background;
+  height: 100%;
+
+  #root {
+    height: 100%;
+
+    .login {
+      height: 100%;
+      display: flex;
+
+      .grid {
+        margin: auto;
+        width: 450px;
+
+        .login-logo {
+          width: 2.5em;
+        }
+
+        .login-signup {
+          text-align: center;
+        }
+
+        h2 {
+          color: $main_color;
+        }
+
+        button {
+          background-color: $main_color;
+          color: $font_color;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+
+import '../css/Login.css';
+import semacticLogo from '../img/semactic-logo.png';
 
 import { userActions } from '../actions';
 
@@ -37,6 +40,7 @@ class Login extends Component {
 
     this.props.dispatch(userActions.login(username, password));
   }
+
   /**
    * @override
    */
@@ -53,11 +57,13 @@ class Login extends Component {
     const {username, password } = this.state;
 
     return (
-      <div className='login main-container'>
+      <div className='login'>
         <Grid>
           <Grid.Column>
-            <Header as='h2' textAlign='center'>Authenticate</Header>
-            { this.renderErrorMessage() }
+            <Header as='h2' textAlign='center'>
+              <img className='login-logo' src={ semacticLogo } alt='Logo' />
+              Log-in to your account
+            </Header>
             <Form size='large' onSubmit={ this.handleSubmit.bind(this) }>
               <Segment stacked>
                 <Form.Input
@@ -82,30 +88,17 @@ class Login extends Component {
                 <Button fluid size='large'>Log in</Button>
               </Segment>
             </Form>
+            <Message className='login-signup'>
+              New with us?
+              <Link to='/signup'> Sign Up</Link>
+            </Message>
           </Grid.Column>
         </Grid>
       </div>
     );
   }
-
-  renderErrorMessage() {
-    let { user } = this.props;
-
-    if (user && user.hasError) {
-      return (
-        <Message error>
-          { user.errorMessage }
-        </Message>
-      );
-    }
-  }
 }
 
-/**
- * Adds to props values from state.
- *
- * @param {object} state
- */
 /**
  * Injects from the store to component's props
  */

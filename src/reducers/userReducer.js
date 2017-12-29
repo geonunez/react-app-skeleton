@@ -5,8 +5,11 @@ const initialState = {};
 export default function user(state = initialState, action) {
   switch (action.type) {
     case userConstants.LOGIN:
+      let { user } = action;
       return {
-        ...state
+        ...state,
+        ...user
+
       }
     case userConstants.LOGOUT:
       return {
